@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="cardHead" id ="cardHead">
+        <h1>
+            Coding Quiz Challenge.
+        </h1>
+        <p>
+            Challenge your friends and compete for 
+            the highest score! Click to Start!
+        </p>
+    </div>
+    <h3 id="timer">Time left - </h3>
+
+    <div>
+        <button type="button" id="btnStart" name="btnStart">
+            Lets start!</button>
+    </div>
+    <div class="questionCard" id="question1">
+        <p id="questionTitle">1. What is JavaScript?</p>
+        <Button class="btnAnswer" id="btnA" name="correct" onclick="nextQuestion('question2'); incrementCounter()">a) JavaScript is a scripting language</Button>
+        <Button class="btnAnswer" id="btnB" onclick="nextQuestion('question2');">b) JavaScript is an assembly language</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question2');">c) JavaScript is a compiled language</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question2');">d) None of the above</Button>
+        <!--answer a-->
+    </div>  
+    <div class="questionCard" id="question2">
+        <p id="questionTitle">2. Which of the following is correct about JavaScript?</p>
+        <Button class="btnAnswer" id="btnA" name="correct" onclick="nextQuestion('question3'); incrementCounter()">a) JavaScript is an Object-Based language</Button>
+        <Button class="btnAnswer" id="btnB" onclick="nextQuestion('question3');">b) JavaScript is Assembly-language</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question3');">c) JavaScript is an Object-Oriented language</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question3');">d) JavaScript is a High-level language</Button>
+        <!--answer a-->
+    </div> 
+    <div class="questionCard" id="question3">
+        <p id="questionTitle">3. Which of the following is not javascript data types?</p>
+        <Button class="btnAnswer" id="btnA" onclick="nextQuestion('question4');">a) Null type</Button>
+        <Button class="btnAnswer" id="btnB" onclick="nextQuestion('question4');">b) Undefined type</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question4');">c) Number type</Button>
+        <Button class="btnAnswer" id="btnD" name="correct" onclick="nextQuestion('question4'); incrementCounter()">d) All of the above</Button>
+        <!--answer d-->
+    </div> 
+    <div class="questionCard" id="question4">
+        <p id="questionTitle">4. Which of the following methods/operation does javascript use instead of == and !=?</p>
+        <Button class="btnAnswer" id="btnA" onclick="nextQuestion('question5');">a) JavaScript uses equalto()</Button>
+        <Button class="btnAnswer" id="btnB" onclick="nextQuestion('question5');">b) JavaScript uses equals() and notequals() instead</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question5');">c) JavaScript uses bitwise checking</Button>
+        <Button class="btnAnswer" id="btnD" name="correct" onclick="nextQuestion('question5'); incrementCounter()">d) JavaScript uses === and !== instead</Button>
+        <!--answer d-->
+    </div> 
+    <div class="questionCard" id="question5">
+        <p id="questionTitle">5. Why event handlers is needed in JS?</p>
+        <Button class="btnAnswer" id="btnA" name="correct" onclick="nextQuestion('question6'); incrementCounter()">a) Allows JavaScript code to alter the behaviour of windows</Button>
+        <Button class="btnAnswer" id="btnB" onclick="nextQuestion('question6');">b) Adds innerHTML page to the code</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question6');">c) Change the server location</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question6');">d) Performs handling of exceptions and occurrences</Button>
+        <!--answer a-->
+    </div> 
+    <div class="questionCard" id="question6">
+        <p id="questionTitle">6. Which of the following is not a framework?</p>
+        <Button class="btnAnswer" id="btnA" onclick="nextQuestion('question7');">a) JavaScript .NET</Button>
+        <Button class="btnAnswer" id="btnB" name="correct" onclick="nextQuestion('question7'); incrementCounter()">b) JavaScript</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question7');">c) Cocoa JS</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question7');">d) jQuery</Button>
+        <!--answer b-->
+    </div> 
+    <div class="questionCard" id="question7">
+        <p id="questionTitle">7. Which of the following is the property that is triggered in response to JS errors?</p>
+        <Button class="btnAnswer" id="btnA" onclick="nextQuestion('question8');">a) onclick</Button>
+        <Button class="btnAnswer" id="btnB" name="correct" onclick="nextQuestion('question8'); incrementCounter()">b) onerror</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question8');">c) onmessage</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question8');">d) onexception</Button>
+        <!--answer b-->
+    </div> 
+    <div class="questionCard" id="question8">
+        <p id="questionTitle">8. Which of the following is not an error in JavaScript?</p>
+        <Button class="btnAnswer" id="btnA" onclick="nextQuestion('question9');">a) Missing of Bracket</Button>
+        <Button class="btnAnswer" id="btnB" name="correct" onclick="nextQuestion('question9'); incrementCounter()">b) Division by zero</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question9');">c) Syntax error</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question9');">d) Missing of semicolons</Button>
+        <!--answer b-->
+    </div> 
+    <div class="questionCard" id="question9">
+        <p id="questionTitle">9. What is the basic difference between JavaScript and Java?</p>
+        <Button class="btnAnswer" id="btnA" onclick="nextQuestion('question10');">a) Functions are considered as fields</Button>
+        <Button class="btnAnswer" id="btnB" name="correct" onclick="nextQuestion('question10'); incrementCounter()">b) Functions are values, and there is no hard distinction between methods and fields</Button>
+        <Button class="btnAnswer" id="btnC" onclick="nextQuestion('question10');">c) Variables are specific</Button>
+        <Button class="btnAnswer" id="btnD" onclick="nextQuestion('question10');">d) There is no difference</Button>
+        <!--answer b-->
+    </div> 
+    <div class="questionCard" id="question10">
+        <p id="questionTitle">10. Why JavaScript Engine is needed?</p>
+        <Button class="btnAnswer" id="btnA" onclick="quizOver();">a) Both Compiling & Interpreting the JavaScript</Button>
+        <Button class="btnAnswer" id="btnB" onclick="quizOver();">b) Parsing the javascript</Button>
+        <Button class="btnAnswer" id="btnC" name="correct" onclick="quizOver(); incrementCounter()">c) Interpreting the JavaScript</Button>
+        <Button class="btnAnswer" id="btnD" onclick="quizOver();">d) Compiling the JavaScript</Button>
+        <!--answer c-->
+    </div>
+    
+    
+    
+    <div class="quizOver" id = "quizOver"> 
+        <h1 id="timeUp">Times up!</h1>
+        <p id="endMsg">
+            Check your score and see how you compare to your peers!
+        </p>
+        <label id="counterId">0</label>
+
+        <input type="text" id="initialsId">Initials</input>
+        <button id="btnSubmit">Submit</button>
+    </div>
+    <div id="savedScore">
+        <table id="scoreTable">
+            <tr>
+                <th>Initials</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td align ="center" id="nameId"></td>
+                <td align ="center" id="scoreId"></td>
+
+            </tr>
+            
+
+
+        </table>
+        
+    </div>
+    
+    
+    
+    
+    <script src="./js/script.js"></script>
+</body>
+
+
+
+</html>
